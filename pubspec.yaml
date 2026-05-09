@@ -1,6 +1,6 @@
 name: flutter_opencv_ffi
 description: "A new Flutter FFI plugin project."
-version: 0.0.1
+version: 0.0.2
 homepage:
 
 environment:
@@ -24,4 +24,6 @@ flutter:
   plugin:
     platforms:
       ohos:
+        ffiPlugin: true
+      android:
         ffiPlugin: true
