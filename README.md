@@ -1,6 +1,12 @@
 # flutter_opencv_ffi
 
+[![GitHub stars](https://img.shields.io/github/stars/ValueNotify666/flutter_opencv_ffi?style=social)](https://github.com/ValueNotify666/flutter_opencv_ffi)
+[![GitHub license](https://img.shields.io/github/license/ValueNotify666/flutter_opencv_ffi)](https://github.com/ValueNotify666/flutter_opencv_ffi/blob/main/LICENSE)
+[![Flutter](https://img.shields.io/badge/Flutter-FFI-blue)](https://flutter.dev/)
+
 [English](#english) | [中文](#中文)
+
+GitHub: https://github.com/ValueNotify666/flutter_opencv_ffi
 
 ---
 
@@ -94,8 +100,25 @@ Add this to your `pubspec.yaml`:
 ```yaml
 dependencies:
   flutter_opencv_ffi:
+    git:
+      url: https://github.com/ValueNotify666/flutter_opencv_ffi.git
+      ref: main
+```
+
+Or for local development:
+
+```yaml
+dependencies:
+  flutter_opencv_ffi:
     path: ../flutter_opencv_ffi
 ```
+
+### Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request or open an Issue on GitHub.
+
+- GitHub: https://github.com/ValueNotify666/flutter_opencv_ffi
+- Issues: https://github.com/ValueNotify666/flutter_opencv_ffi/issues
 
 ---
 
@@ -189,5 +212,22 @@ Uint8List edges = FlutterOpencvFfi.detectEdgesRgba(
 ```yaml
 dependencies:
   flutter_opencv_ffi:
+    git:
+      url: https://github.com/ValueNotify666/flutter_opencv_ffi.git
+      ref: main
+```
+
+或用于本地开发：
+
+```yaml
+dependencies:
+  flutter_opencv_ffi:
     path: ../flutter_opencv_ffi
 ```
+
+### 贡献
+
+欢迎贡献！请随时提交 Pull Request 或在 GitHub 上提交 Issue。
+
+- GitHub: https://github.com/ValueNotify666/flutter_opencv_ffi
+- Issues: https://github.com/ValueNotify666/flutter_opencv_ffi/issues
