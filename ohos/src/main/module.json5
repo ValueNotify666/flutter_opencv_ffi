@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "flutter_opencv_ffi",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet",
+    ]
+  }
+}
