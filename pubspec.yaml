@@ -23,5 +23,9 @@ dev_dependencies:
 flutter:
   plugin:
     platforms:
+      ios:
+        ffiPlugin: true
+      macos:
+        ffiPlugin: true
       ohos:
         ffiPlugin: true

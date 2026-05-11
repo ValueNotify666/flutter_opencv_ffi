@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_opencv_ffi/flutter_opencv_ffi.dart' as flutter_opencv_ffi;
+import 'package:flutter_opencv_ffi/flutter_opencv_ffi.dart'
+    as flutter_opencv_ffi;
 import 'package:image/image.dart' as img;
 
 void main() {
@@ -15,8 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  static const String _assetPath =
-      'images/ae0b4515633b54ddda77514a07d00e7.jpg';
+  static const String _assetPath = 'images/ae0b4515633b54ddda77514a07d00e7.jpg';
 
   String _opencvVersion = '';
   String _status = '处理中...';
@@ -79,11 +79,11 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('状态：$_status');
+    debugPrint('OpenCV：${_opencvVersion.isEmpty ? '-' : _opencvVersion}');
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('OpenCV FFI Edge Detection'),
-        ),
+        appBar: AppBar(title: const Text('OpenCV FFI Edge Detection')),
         body: ListView(
           padding: const EdgeInsets.all(16),
           children: <Widget>[

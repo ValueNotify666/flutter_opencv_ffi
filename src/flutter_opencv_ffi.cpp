@@ -10,9 +10,9 @@
 #include <opencv2/imgproc.hpp>
 #endif
 
-FFI_PLUGIN_EXPORT int sum(int a, int b) { return a + b; }
+extern "C" FFI_PLUGIN_EXPORT int sum(int a, int b) { return a + b; }
 
-FFI_PLUGIN_EXPORT int sum_long_running(int a, int b) {
+extern "C" FFI_PLUGIN_EXPORT int sum_long_running(int a, int b) {
 #if _WIN32
   Sleep(5000);
 #else
@@ -21,7 +21,7 @@ FFI_PLUGIN_EXPORT int sum_long_running(int a, int b) {
   return a + b;
 }
 
-FFI_PLUGIN_EXPORT const char* opencv_version(void) {
+extern "C" FFI_PLUGIN_EXPORT const char* opencv_version(void) {
 #ifdef HAVE_OPENCV
   return CV_VERSION;
 #else
@@ -295,7 +295,7 @@ static cv::Point2f average_points(
 }
 #endif
 
-FFI_PLUGIN_EXPORT uint8_t* opencv_detect_edges_rgba(
+extern "C" FFI_PLUGIN_EXPORT uint8_t* opencv_detect_edges_rgba(
     const uint8_t* rgba,
     int32_t width,
     int32_t height,
@@ -411,7 +411,7 @@ FFI_PLUGIN_EXPORT uint8_t* opencv_detect_edges_rgba(
   return output;
 }
 
-FFI_PLUGIN_EXPORT int32_t opencv_detect_document_8_points_rgba(
+extern "C" FFI_PLUGIN_EXPORT int32_t opencv_detect_document_8_points_rgba(
     const uint8_t* rgba,
     int32_t width,
     int32_t height,
@@ -433,7 +433,7 @@ FFI_PLUGIN_EXPORT int32_t opencv_detect_document_8_points_rgba(
 #endif
 }
 
-FFI_PLUGIN_EXPORT uint8_t* opencv_crop_enhance_document_8_points_rgba(
+extern "C" FFI_PLUGIN_EXPORT uint8_t* opencv_crop_enhance_document_8_points_rgba(
     const uint8_t* rgba,
     int32_t width,
     int32_t height,
@@ -524,6 +524,6 @@ FFI_PLUGIN_EXPORT uint8_t* opencv_crop_enhance_document_8_points_rgba(
 #endif
 }
 
-FFI_PLUGIN_EXPORT void opencv_free(uint8_t* pointer) {
+extern "C" FFI_PLUGIN_EXPORT void opencv_free(uint8_t* pointer) {
   free(pointer);
 }
